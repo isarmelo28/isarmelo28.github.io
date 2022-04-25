@@ -1,0 +1,41 @@
+/* organizando o arquivo CSS*/
+/*Limpando o navegador, CSS Resert */
+/* inherit - Herança explícita.
+   initial - Força a redefinicação de valores 
+   unset- Desabilita uma propriedade */
+
+body, h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0; 
+    outline: 0;
+}
+* {
+    box-sizing: border-box;
+}
+
+/*body > div {
+    width: 300px;
+    height: 300px;
+    margin: 5% auto;
+    border: solid 10px red;
+    padding: 50px 20 px; (dá a margem externo que no content-box soma os valores de rerencia. ex: 50px vai aumenar 50un nas margens superior e inferior e 20ps nas laterias. Assim um quadrado 300x300 fica 350x320)
+
+}*/
+
+body {
+    background-color: #333;
+    color: #e4e4e4;
+}
+
+/*Quando a largura mínima for de 168px aplique este CSS*/
+@media (min-width: 768px){
+    /* especificidade CSS, Quanto mais especificado o seletor,mais importante.*/
+    html body {
+    background-color: unset;
+    color: initial;
+    }
+
+    body {
+        background: red;
+    }
+}
